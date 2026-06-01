@@ -304,11 +304,15 @@
         padding: var(--space-lg);
         max-height: 0;
         overflow: hidden;
-        transition: max-height var(--transition);
+        visibility: hidden;
+        pointer-events: none;
+        transition: max-height var(--transition), visibility var(--transition);
       }
 
       .nav.active {
         max-height: 500px;
+        visibility: visible;
+        pointer-events: auto;
       }
 
       .nav a {
@@ -338,6 +342,7 @@
     .hero {
       padding-top: clamp(3rem, 10vw, 6rem);
       padding-bottom: clamp(3rem, 8vw, 4rem);
+      scroll-margin-top: 5rem;
     }
 
     .hero-content {
@@ -779,10 +784,19 @@
 
       .nav {
         max-height: 0;
+        visibility: hidden;
+        pointer-events: none;
       }
 
       .nav.active {
         max-height: 600px;
+        visibility: visible;
+        pointer-events: auto;
+      }
+
+      .hero {
+        padding-top: 5rem !important;
+        scroll-margin-top: 6rem;
       }
 
       .section {
@@ -824,6 +838,7 @@
         padding: var(--space-lg);
         order: -1;
         margin-bottom: var(--space-lg);
+        margin-top: var(--space-md);
       }
 
       .meta-item {
@@ -951,12 +966,13 @@
       }
 
       .hero {
-        padding-top: 2rem;
+        padding-top: 6rem;
         padding-bottom: 2rem;
+        scroll-margin-top: 6rem;
       }
 
-      .hero-title {
-        font-size: 1.5rem;
+      .hero-copy {
+        gap: var(--space-md);
       }
 
       .hero-description {
@@ -970,6 +986,8 @@
 
       .hero-meta {
         padding: var(--space-md);
+        margin-top: var(--space-sm);
+        margin-bottom: var(--space-md);
       }
 
       .section {
