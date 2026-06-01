@@ -239,6 +239,25 @@
       height: 1.2rem;
     }
 
+    .language-toggle {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 2.5rem;
+      height: 2.5rem;
+      border-radius: var(--radius-lg);
+      background: var(--bg-secondary);
+      color: var(--text-primary);
+      transition: background var(--transition);
+      font-size: var(--text-sm);
+      font-weight: 600;
+      letter-spacing: 0.05em;
+    }
+
+    .language-toggle:hover {
+      background: var(--bg-tertiary);
+    }
+
     .mobile-menu-btn {
       display: none;
       width: 2.5rem;
@@ -758,6 +777,9 @@
               <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
             </svg>
           </button>
+          <button class="language-toggle" aria-label="Toggle language" data-language-toggle>
+            <span id="lang-indicator">EN</span>
+          </button>
           <button class="mobile-menu-btn" id="menu-btn" aria-label="Toggle menu" aria-controls="main-nav">
             <span></span>
             <span></span>
@@ -773,26 +795,26 @@
     <section class="hero" id="top">
       <div class="container hero-content">
         <div class="hero-copy">
-          <div class="hero-badge">ICT · Technical Support · Infrastructure</div>
-          <h1 class="hero-title">Yassine Roudane</h1>
-          <p class="hero-description">IT Technician at Esti.it supporting system administration and ICT infrastructure. I assist with Day-to-Day operations, technical troubleshooting, infrastructure maintenance, and help maintain reliable systems across the organization.</p>
+          <div class="hero-badge" data-translate="heroBadge">ICT · Technical Support · Infrastructure</div>
+          <h1 class="hero-title" data-translate="heroTitle">Yassine Roudane</h1>
+          <p class="hero-description" data-translate="heroDescription">IT Technician at Esti.it supporting system administration and ICT infrastructure. I assist with Day-to-Day operations, technical troubleshooting, infrastructure maintenance, and help maintain reliable systems across the organization.</p>
           <div class="hero-actions">
-            <a href="#projects" class="btn btn-primary">View work</a>
-            <a href="#contact" class="btn btn-secondary">Get in touch</a>
+            <a href="#projects" class="btn btn-primary" data-translate="viewWork">View work</a>
+            <a href="#contact" class="btn btn-secondary" data-translate="getInTouch">Get in touch</a>
           </div>
         </div>
         <div class="hero-meta">
           <div class="meta-item">
-            <div class="meta-key">Role</div>
-            <div class="meta-value">IT Technician</div>
+            <div class="meta-key" data-translate="role">Role</div>
+            <div class="meta-value" data-translate="roleValue">IT Technician</div>
           </div>
           <div class="meta-item">
-            <div class="meta-key">Organization</div>
-            <div class="meta-value">Esti.it</div>
+            <div class="meta-key" data-translate="organization">Organization</div>
+            <div class="meta-value" data-translate="organizationValue">Esti.it</div>
           </div>
           <div class="meta-item">
-            <div class="meta-key">Focus Areas</div>
-            <div class="meta-value">Linux · App Dev · Sysadmin Support · ICT</div>
+            <div class="meta-key" data-translate="focusAreas">Focus Areas</div>
+            <div class="meta-value" data-translate="focusAreasValue">Linux · App Dev · Sysadmin Support · ICT</div>
           </div>
 
         </div>
@@ -804,34 +826,34 @@
       <div class="container">
         <div class="grid-4">
           <div class="card scroll-reveal">
-            <div class="card-title">Sysadmin Support</div>
-            <div class="card-text">Assisting with Linux server administration, system configuration, user management, and operational troubleshooting.</div>
+            <div class="card-title" data-translate="sysadminSupport">Sysadmin Support</div>
+            <div class="card-text" data-translate="sysadminSupportDesc">Assisting with Linux server administration, system configuration, user management, and operational troubleshooting.</div>
             <div class="card-meta">
-              <span>support</span>
+              <span data-translate="support">support</span>
               <span>Linux / Operations</span>
             </div>
           </div>
           <div class="card scroll-reveal">
-            <div class="card-title">Infrastructure Maintenance</div>
-            <div class="card-text">Service monitoring, system updates, infrastructure support, and maintaining reliable operations across Esti.it.</div>
+            <div class="card-title" data-translate="infrastructureMaintenance">Infrastructure Maintenance</div>
+            <div class="card-text" data-translate="infrastructureMaintenanceDesc">Service monitoring, system updates, infrastructure support, and maintaining reliable operations across Esti.it.</div>
             <div class="card-meta">
-              <span>maintenance</span>
+              <span data-translate="maintenance">maintenance</span>
               <span>Monitoring / Support</span>
             </div>
           </div>
           <div class="card scroll-reveal">
-            <div class="card-title">Technical Troubleshooting</div>
-            <div class="card-text">Diagnosing and resolving system issues, network problems, hardware support, and day-to-day technical issues.</div>
+            <div class="card-title" data-translate="technicalTroubleshooting">Technical Troubleshooting</div>
+            <div class="card-text" data-translate="technicalTroubleshootingDesc">Diagnosing and resolving system issues, network problems, hardware support, and day-to-day technical issues.</div>
             <div class="card-meta">
-              <span>support</span>
+              <span data-translate="support">support</span>
               <span>Troubleshooting / ICT</span>
             </div>
           </div>
           <div class="card scroll-reveal">
-            <div class="card-title">ICT Operations</div>
-            <div class="card-text">Supporting all ICT infrastructure needs, documentation, knowledge sharing, and helping maintain system reliability and security.</div>
+            <div class="card-title" data-translate="ictOperations">ICT Operations</div>
+            <div class="card-text" data-translate="ictOperationsDesc">Supporting all ICT infrastructure needs, documentation, knowledge sharing, and helping maintain system reliability and security.</div>
             <div class="card-meta">
-              <span>lens</span>
+              <span data-translate="lens">lens</span>
               <span>ICT / Support</span>
             </div>
           </div>
@@ -843,18 +865,18 @@
     <section class="section" id="about">
       <div class="container">
         <div class="section-header">
-          <div class="section-badge">About</div>
-          <h2 class="section-title">Supporting infrastructure with practical technical skills.</h2>
-          <p class="section-description">At Esti.it, I support the sysadmin team across ICT operations — troubleshooting systems, maintaining infrastructure, and helping ensure reliable technical operations across the organization.</p>
+          <div class="section-badge" data-translate="aboutSection">About</div>
+          <h2 class="section-title" data-translate="supportingInfrastructure">Supporting infrastructure with practical technical skills.</h2>
+          <p class="section-description" data-translate="supportingInfrastructureDesc">At Esti.it, I support the sysadmin team across ICT operations — troubleshooting systems, maintaining infrastructure, and helping ensure reliable technical operations across the organization.</p>
         </div>
         <div class="content-block scroll-reveal">
-          <p>
+          <p data-translate="workBest">
             I work best when supporting teams that need reliable infrastructure and technical operations. That can mean assisting with Linux server administration, troubleshooting system problems, maintaining infrastructure, developing web applications, or helping ensure systems stay reliable and secure.
           </p>
-          <p>
+          <p data-translate="focusSpans">
             My focus spans Linux operations, web development, basic Windows support, technical support, infrastructure maintenance, system troubleshooting, and ICT support. I care about practical outcomes — keeping systems reliable, solving technical problems quickly, and supporting the broader team.
           </p>
-          <div class="content-quote">
+          <div class="content-quote" data-translate="goalSimple">
             The goal is simple: keep systems running smoothly and support the team when technical problems arise.
           </div>
         </div>
@@ -865,14 +887,14 @@
     <section class="section" id="stack">
       <div class="container">
         <div class="section-header">
-          <div class="section-badge">Stack</div>
-          <h2 class="section-title">Technical skills for IT and infrastructure support.</h2>
-          <p class="section-description">Skills and tools I use to support the sysadmin team and maintain infrastructure at Esti.it.</p>
+          <div class="section-badge" data-translate="stackSection">Stack</div>
+          <h2 class="section-title" data-translate="technicalSkills">Technical skills for IT and infrastructure support.</h2>
+          <p class="section-description" data-translate="technicalSkillsDesc">Skills and tools I use to support the sysadmin team and maintain infrastructure at Esti.it.</p>
         </div>
         <div class="grid-3">
           <div class="card scroll-reveal">
-            <h3 class="card-title">Linux & Systems</h3>
-            <div class="card-text">Linux server support, system administration assistance, user management, service configuration, troubleshooting, and helping maintain system reliability.</div>
+            <h3 class="card-title" data-translate="linuxSystems">Linux & Systems</h3>
+            <div class="card-text" data-translate="linuxSystemsDesc">Linux server support, system administration assistance, user management, service configuration, troubleshooting, and helping maintain system reliability.</div>
             <div class="tags">
               <span class="tag">Linux</span>
               <span class="tag">Bash</span>
@@ -882,8 +904,8 @@
             </div>
           </div>
           <div class="card scroll-reveal">
-            <h3 class="card-title">Infrastructure Support</h3>
-            <div class="card-text">System monitoring, infrastructure maintenance, service support, deployment assistance, and helping ensure infrastructure stays reliable and operational.</div>
+            <h3 class="card-title" data-translate="infrastructureSupport">Infrastructure Support</h3>
+            <div class="card-text" data-translate="infrastructureSupportDesc">System monitoring, infrastructure maintenance, service support, deployment assistance, and helping ensure infrastructure stays reliable and operational.</div>
             <div class="tags">
               <span class="tag">Monitoring</span>
               <span class="tag">Maintenance</span>
@@ -893,8 +915,8 @@
             </div>
           </div>
           <div class="card scroll-reveal">
-            <h3 class="card-title">Technical Support</h3>
-            <div class="card-text">General IT troubleshooting, ICT support, network issues, system diagnostics, user support, and helping resolve technical problems quickly.</div>
+            <h3 class="card-title" data-translate="technicalSupportTitle">Technical Support</h3>
+            <div class="card-text" data-translate="technicalSupportDesc">General IT troubleshooting, ICT support, network issues, system diagnostics, user support, and helping resolve technical problems quickly.</div>
             <div class="tags">
               <span class="tag">Troubleshooting</span>
               <span class="tag">ICT Support</span>
@@ -904,8 +926,8 @@
             </div>
           </div>
           <div class="card scroll-reveal">
-            <h3 class="card-title">Application Development</h3>
-            <div class="card-text">Building applications, programs, and scripts from scratch. Designing and implementing full solutions with clean architecture, efficient logic, and production-ready code quality.</div>
+            <h3 class="card-title" data-translate="appDevelopment">Application Development</h3>
+            <div class="card-text" data-translate="appDevelopmentDesc">Building applications, programs, and scripts from scratch. Designing and implementing full solutions with clean architecture, efficient logic, and production-ready code quality.</div>
             <div class="tags">
               <span class="tag">PHP</span>
               <span class="tag">Python</span>
@@ -915,8 +937,8 @@
             </div>
           </div>
           <div class="card scroll-reveal">
-            <h3 class="card-title">Database Design & Integration</h3>
-            <div class="card-text">Database design, creation, and integration into applications. Schema optimization, query performance, data integrity, migrations, and ensuring reliable data layer architecture.</div>
+            <h3 class="card-title" data-translate="databaseDesign">Database Design & Integration</h3>
+            <div class="card-text" data-translate="databaseDesignDesc">Database design, creation, and integration into applications. Schema optimization, query performance, data integrity, migrations, and ensuring reliable data layer architecture.</div>
             <div class="tags">
               <span class="tag">Database Design</span>
               <span class="tag">SQL</span>
@@ -933,9 +955,9 @@
     <section class="section" id="projects">
       <div class="container">
         <div class="section-header">
-          <div class="section-badge">Projects</div>
-          <h2 class="section-title">Experience with systems, automation, and technical solutions.</h2>
-          <p class="section-description">Projects and technical work demonstrating infrastructure knowledge, system design, and problem-solving experience.</p>
+          <div class="section-badge" data-translate="projectsSection">Projects</div>
+          <h2 class="section-title" data-translate="experienceWith">Experience with systems, automation, and technical solutions.</h2>
+          <p class="section-description" data-translate="projectsDesc">Projects and technical work demonstrating infrastructure knowledge, system design, and problem-solving experience.</p>
         </div>
         <div class="grid-2">
           <div class="card scroll-reveal">
@@ -1095,9 +1117,9 @@
     <section class="section" id="journey">
       <div class="container">
         <div class="section-header">
-          <div class="section-badge">Journey</div>
-          <h2 class="section-title">Building technical experience and infrastructure knowledge.</h2>
-          <p class="section-description">How hands-on work shaped my approach to IT support, infrastructure, and technical problem-solving.</p>
+          <div class="section-badge" data-translate="journeySection">Journey</div>
+          <h2 class="section-title" data-translate="buildingTechnical">Building technical experience and infrastructure knowledge.</h2>
+          <p class="section-description" data-translate="journeyDesc">How hands-on work shaped my approach to IT support, infrastructure, and technical problem-solving.</p>
         </div>
         <div class="grid-2">
           <div class="card scroll-reveal">
@@ -1132,13 +1154,13 @@
     <section class="section" id="contact">
       <div class="container">
         <div class="section-header">
-          <div class="section-badge">Connect</div>
-          <h2 class="section-title">Get in touch</h2>
-          <p class="section-description">Find me on GitHub or LinkedIn to see more technical work and projects.</p>
+          <div class="section-badge" data-translate="connectSection">Connect</div>
+          <h2 class="section-title" data-translate="getInTouchText">Get in touch</h2>
+          <p class="section-description" data-translate="findMe">Find me on GitHub or LinkedIn to see more technical work and projects.</p>
         </div>
         <div class="card">
-          <h3 class="card-title">Connect</h3>
-          <p class="card-text">Find me on the platforms below to see more technical work and projects.</p>
+          <h3 class="card-title" data-translate="connectSection">Connect</h3>
+          <p class="card-text" data-translate="connectPlatforms">Find me on the platforms below to see more technical work and projects.</p>
           <div style="display: grid; gap: 1rem; margin-top: 2rem;">
             <a href="https://github.com/yroudane" target="_blank" rel="noopener noreferrer" style="display: flex; justify-content: space-between; align-items: center; padding: 1rem; background: var(--bg-tertiary); border: 1px solid var(--border-color); border-radius: var(--radius-lg); transition: all var(--transition);" onmouseover="this.style.borderColor='var(--accent-primary)'; this.style.background='var(--accent-light)'" onmouseout="this.style.borderColor='var(--border-color)'; this.style.background='var(--bg-tertiary)'">
               <span>GitHub</span>
@@ -1160,11 +1182,180 @@
 
   <footer class="footer">
     <div class="container footer-inner">
-      <p>Made w/ ❤️ <br>© 2026 Yassine Roudane. All rights reserved.</p>
+      <p data-translate="footer">Made w/ ❤️ <br>© 2026 Yassine Roudane. All rights reserved.</p>
     </div>
   </footer>
 
   <script>
+    // Translation data
+    const translations = {
+      en: {
+        about: 'About',
+        stack: 'Stack',
+        projects: 'Projects',
+        journey: 'Journey',
+        contact: 'Contact',
+        viewWork: 'View work',
+        getInTouch: 'Get in touch',
+        role: 'Role',
+        roleValue: 'IT Technician',
+        organization: 'Organization',
+        organizationValue: 'Esti.it',
+        focusAreas: 'Focus Areas',
+        focusAreasValue: 'Linux · App Dev · Sysadmin Support · ICT',
+        deploy: 'Deploy',
+        deployValue: 'GitHub Pages · Static',
+        sysadminSupport: 'Sysadmin Support',
+        sysadminSupportDesc: 'Assisting with Linux server administration, system configuration, user management, and operational troubleshooting.',
+        infrastructureMaintenance: 'Infrastructure Maintenance',
+        infrastructureMaintenanceDesc: 'Service monitoring, system updates, infrastructure support, and maintaining reliable operations across Esti.it.',
+        technicalTroubleshooting: 'Technical Troubleshooting',
+        technicalTroubleshootingDesc: 'Diagnosing and resolving system issues, network problems, hardware support, and day-to-day technical issues.',
+        ictOperations: 'ICT Operations',
+        ictOperationsDesc: 'Supporting all ICT infrastructure needs, documentation, knowledge sharing, and helping maintain system reliability and security.',
+        support: 'support',
+        maintenance: 'maintenance',
+        lens: 'lens',
+        aboutSection: 'About',
+        supportingInfrastructure: 'Supporting infrastructure with practical technical skills.',
+        supportingInfrastructureDesc: 'At Esti.it, I support the sysadmin team across ICT operations — troubleshooting systems, maintaining infrastructure, and helping ensure reliable technical operations across the organization.',
+        workBest: 'I work best when supporting teams that need reliable infrastructure and technical operations. That can mean assisting with Linux server administration, troubleshooting system problems, maintaining infrastructure, developing web applications, or helping ensure systems stay reliable and secure.',
+        focusSpans: 'My focus spans Linux operations, web development, basic Windows support, technical support, infrastructure maintenance, system troubleshooting, and ICT support. I care about practical outcomes — keeping systems reliable, solving technical problems quickly, and supporting the broader team.',
+        goalSimple: 'The goal is simple: keep systems running smoothly and support the team when technical problems arise.',
+        stackSection: 'Stack',
+        technicalSkills: 'Technical skills for IT and infrastructure support.',
+        technicalSkillsDesc: 'Skills and tools I use to support the sysadmin team and maintain infrastructure at Esti.it.',
+        linuxSystems: 'Linux & Systems',
+        linuxSystemsDesc: 'Linux server support, system administration assistance, user management, service configuration, troubleshooting, and helping maintain system reliability.',
+        infrastructureSupport: 'Infrastructure Support',
+        infrastructureSupportDesc: 'System monitoring, infrastructure maintenance, service support, deployment assistance, and helping ensure infrastructure stays reliable and operational.',
+        technicalSupportTitle: 'Technical Support',
+        technicalSupportDesc: 'General IT troubleshooting, ICT support, network issues, system diagnostics, user support, and helping resolve technical problems quickly.',
+        appDevelopment: 'Application Development',
+        appDevelopmentDesc: 'Building applications, programs, and scripts from scratch. Designing and implementing full solutions with clean architecture, efficient logic, and production-ready code quality.',
+        databaseDesign: 'Database Design & Integration',
+        databaseDesignDesc: 'Database design, creation, and integration into applications. Schema optimization, query performance, data integrity, migrations, and ensuring reliable data layer architecture.',
+        projectsSection: 'Projects',
+        experienceWith: 'Experience with systems, automation, and technical solutions.',
+        projectsDesc: 'Projects and technical work demonstrating infrastructure knowledge, system design, and problem-solving experience.',
+        journeySection: 'Journey',
+        buildingTechnical: 'Building technical experience and infrastructure knowledge.',
+        journeyDesc: 'How hands-on work shaped my approach to IT support, infrastructure, and technical problem-solving.',
+        connectSection: 'Connect',
+        getInTouchText: 'Get in touch',
+        findMe: 'Find me on GitHub or LinkedIn to see more technical work and projects.',
+        connectPlatforms: 'Find me on the platforms below to see more technical work and projects.',
+        footer: 'Made w/ ❤️ <br>© 2026 Yassine Roudane. All rights reserved.',
+        heroTitle: 'Yassine Roudane',
+        heroBadge: 'ICT · Technical Support · Infrastructure',
+        heroDescription: 'IT Technician at Esti.it supporting system administration and ICT infrastructure. I assist with Day-to-Day operations, technical troubleshooting, infrastructure maintenance, and help maintain reliable systems across the organization.'
+      },
+      it: {
+        about: 'Chi Sono',
+        stack: 'Stack',
+        projects: 'Progetti',
+        journey: 'Percorso',
+        contact: 'Contatti',
+        viewWork: 'Vedi il mio lavoro',
+        getInTouch: 'Contattami',
+        role: 'Ruolo',
+        roleValue: 'IT Technician',
+        organization: 'Organizzazione',
+        organizationValue: 'Esti.it',
+        focusAreas: 'Aree di Focus',
+        focusAreasValue: 'Linux · Sviluppo App · Supporto Sysadmin · ICT',
+        deploy: 'Deploy',
+        deployValue: 'GitHub Pages · Static',
+        sysadminSupport: 'Supporto Sysadmin',
+        sysadminSupportDesc: 'Supporto amministrazione server Linux, configurazione sistema, gestione utenti e risoluzione problemi operativi.',
+        infrastructureMaintenance: 'Manutenzione Infrastruttura',
+        infrastructureMaintenanceDesc: 'Monitoraggio servizi, aggiornamenti sistema, supporto infrastruttura e mantenimento di operazioni affidabili su Esti.it.',
+        technicalTroubleshooting: 'Risoluzione Problemi Tecnici',
+        technicalTroubleshootingDesc: 'Diagnosi e risoluzione problemi sistema, problemi di rete, supporto hardware e problemi tecnici quotidiani.',
+        ictOperations: 'Operazioni ICT',
+        ictOperationsDesc: 'Supporto esigenze infrastruttura ICT, documentazione, condivisione conoscenze e aiuto per mantenere affidabilità e sicurezza sistema.',
+        support: 'supporto',
+        maintenance: 'manutenzione',
+        lens: 'lens',
+        aboutSection: 'Chi Sono',
+        supportingInfrastructure: 'Supporto infrastruttura con competenze tecniche pratiche.',
+        supportingInfrastructureDesc: 'In Esti.it supporto il team sysadmin nelle operazioni ICT — risoluzione problemi sistemi, manutenzione infrastruttura e aiuto per garantire operazioni tecniche affidabili.',
+        workBest: 'Lavoro al meglio quando supporto team che hanno bisogno di infrastruttura affidabile e operazioni tecniche. Ciò può significare assistenza amministrazione server Linux, risoluzione problemi sistema, manutenzione infrastruttura, sviluppo applicazioni web o aiuto nel garantire sistemi affidabili e sicuri.',
+        focusSpans: 'La mia attenzione spazia su operazioni Linux, sviluppo web, supporto Windows base, supporto tecnico, manutenzione infrastruttura, risoluzione problemi sistema e supporto ICT. Mi importa dei risultati pratici — mantenere sistemi affidabili, risolvere problemi tecnici rapidamente e supportare il team più ampio.',
+        goalSimple: 'L\'obiettivo è semplice: mantenere i sistemi in esecuzione fluida e supportare il team quando sorgono problemi tecnici.',
+        stackSection: 'Stack',
+        technicalSkills: 'Competenze tecniche per supporto IT e infrastruttura.',
+        technicalSkillsDesc: 'Competenze e strumenti che uso per supportare il team sysadmin e mantenere infrastruttura in Esti.it.',
+        linuxSystems: 'Linux & Sistemi',
+        linuxSystemsDesc: 'Supporto server Linux, assistenza amministrazione sistema, gestione utenti, configurazione servizi, risoluzione problemi e aiuto nel mantenere affidabilità sistema.',
+        infrastructureSupport: 'Supporto Infrastruttura',
+        infrastructureSupportDesc: 'Monitoraggio sistema, manutenzione infrastruttura, supporto servizi, assistenza deployment e aiuto nel garantire infrastruttura affidabile e operazionale.',
+        technicalSupportTitle: 'Supporto Tecnico',
+        technicalSupportDesc: 'Risoluzione problemi IT generale, supporto ICT, problemi di rete, diagnostica sistema, supporto utente e aiuto risoluzione problemi tecnici rapidamente.',
+        appDevelopment: 'Sviluppo Applicazioni',
+        appDevelopmentDesc: 'Creazione applicazioni, programmi e script da zero. Progettazione e implementazione soluzioni complete con architettura pulita, logica efficiente e qualità pronta per produzione.',
+        databaseDesign: 'Design Database & Integrazione',
+        databaseDesignDesc: 'Design database, creazione e integrazione in applicazioni. Ottimizzazione schema, performance query, integrità dati, migrazioni e garanzia architettura affidabile livello dati.',
+        projectsSection: 'Progetti',
+        experienceWith: 'Esperienza con sistemi, automazione e soluzioni tecniche.',
+        projectsDesc: 'Progetti e lavoro tecnico che dimostra conoscenza infrastruttura, design sistema e esperienza risoluzione problemi.',
+        journeySection: 'Percorso',
+        buildingTechnical: 'Costruire esperienza tecnica e conoscenza infrastruttura.',
+        journeyDesc: 'Come il lavoro pratico ha plasmato il mio approccio al supporto IT, infrastruttura e risoluzione problemi tecnici.',
+        connectSection: 'Contatti',
+        getInTouchText: 'Contattami',
+        findMe: 'Trovami su GitHub e LinkedIn per vedere più lavoro tecnico e progetti.',
+        connectPlatforms: 'Trovami sulle piattaforme sottostanti per vedere più lavoro tecnico e progetti.',
+        footer: 'Made w/ ❤️ <br>© 2026 Yassine Roudane. Tutti i diritti riservati.',
+        heroTitle: 'Yassine Roudane',
+        heroBadge: 'ICT · Supporto Tecnico · Infrastruttura',
+        heroDescription: 'IT Technician in Esti.it supporto amministrazione sistema e infrastruttura ICT. Aiuto con operazioni quotidiane, risoluzione problemi tecnici, manutenzione infrastruttura e aiuto nel mantenere sistemi affidabili.'
+      }
+    };
+
+    // Language toggle
+    const languageToggle = document.querySelector('[data-language-toggle]');
+    const langIndicator = document.getElementById('lang-indicator');
+    
+    const savedLanguage = localStorage.getItem('language') || 'en';
+    let currentLanguage = savedLanguage;
+    
+    const updateLanguage = (lang) => {
+      currentLanguage = lang;
+      localStorage.setItem('language', lang);
+      langIndicator.textContent = lang.toUpperCase();
+      
+      // Update navigation
+      const navLinks = document.querySelectorAll('.nav a');
+      const navTexts = ['about', 'stack', 'projects', 'journey', 'contact'];
+      navLinks.forEach((link, index) => {
+        if (index < navTexts.length) {
+          link.textContent = translations[lang][navTexts[index]];
+        }
+      });
+      
+      // Update all elements with data-translate
+      document.querySelectorAll('[data-translate]').forEach(el => {
+        const key = el.getAttribute('data-translate');
+        if (key && translations[lang][key]) {
+          if (key === 'footer') {
+            el.innerHTML = translations[lang][key];
+          } else {
+            el.textContent = translations[lang][key];
+          }
+        }
+      });
+    };
+    
+    langIndicator.textContent = currentLanguage.toUpperCase();
+    languageToggle.addEventListener('click', () => {
+      const newLanguage = currentLanguage === 'en' ? 'it' : 'en';
+      updateLanguage(newLanguage);
+    });
+    
+    // Initialize language
+    updateLanguage(currentLanguage);
+
     // Theme toggle
     const themeToggle = document.querySelector('[data-theme-toggle]');
     const html = document.documentElement;
